@@ -1,7 +1,8 @@
-An update on each of the tasks described on your project plan including references to specific artifacts in your repository (such as datasets, scripts, workflows, workflow diagrams, etc).
-An updated timeline indicating the status of each task and when they will be completed.
-A description of any changes to your project plan itself, in particular about your progress so far. Also include changes you made to your plan based on feedback you may have received for Milestone 2.
-Each team member has to write a short summary of their contributions to the current milestone. Each team member should add and commit their contribution summary themselves to the shared github repo.
+## Addressing Research Question: 
+
+RQ: How can we distinguish between healthy and unhealthy foods? Are fast food items noticeably more unhealthy compared to other foods? Are there particular nutritional components that clearly distinguish “regular foods” from fast food? 
+
+So far, our analysis has helped clarify healthy from unhealthy foods, especially when comparing fast food items to general foods in our USDA dataset. After some data cleaning across the datasets to help sustain data integrity, we found that fast food items have significantly higher calorie counts (around 530 calories) with a distribution skewed towards higher values because of some outliers with very high calories. When looking at the correlation between protein and cholesterol levels, the USDA data revealed greater nutritional balance across various food categories with an average protein content of 10.8 grams which was surprising. Some of these early patterns in our analysis show that while fast foods are generally more calorie-dense, nutritional components such as protein and cholesterol do not consistently align with objective healthiness. While some of these findings might seem obvious, it’s always good to figure out these answers for ourselves so that we can make more health-conscious choices in the future.
 
 ## Individual Contributions:
 
@@ -10,5 +11,34 @@ Luke Gauer: I helped plan out the timeline for the rest of our project and made 
 
 Sankirtana Ravichandran:  I cleaned one dataset and developed a series of visualizations to help our group explore its contents in isolation. This was an interesting experience because I followed the same data-cleaning pattern I discussed with my teammates, including imputing missing values and standardizing naming conventions across the dataset. However, after completing that initial exploration of the data and cleaning it, I realized that there are other aspects of this data that may require further exploration. During the data cleaning phase of this project, we divided and conquered the tasks. However, I believe we will need to collaborate more closely in order to effectively integrate the three datasets together. 
 
-Evan Ma:
+Evan: I cleaned and analysed the fast food dataset. I dropped any potential duplicate rows, created some EDA, and added a correlation matrix. I chose not to drop any null values because the nulls in the dataset were likely intentional. I also researched how to integrate our dataset for the next steps and found some credible resources online for us to use. Following the team roles from the project plan, I started and managed the uploads to GitHub and made sure all the versions were pushed correctly. I also did final checks to make sure our code was complete, our report satisfied the word count, and that our content was in line with our research question.
+
+## Updated Timeline:
+
+We have continued to meet bi-weekly to check our progress so that the work isn’t completed last minute. This strategy has been helpful in relieving stress so that each of us has time to complete our portions before the other team members do theirs. 
+
+We have currently completed our project plan, data cleaning, data organization, researched the data sources in depth, and have created basic EDAs and statistics. We initially struggled with data cleaning due to some null-value issues. We went through an extensive process of determining how best to handle the null values found in each of the datasets. We considered removing these points from the data altogether, but quickly realized that this wouldn’t effectively preserve the data. The missing feature for a specific data point itself can at times carry more information about the value in consideration. Due to this, we decided to impute the missing values with the median for all other values within that group. This way, we didn’t unnecessarily remove values from our dataset; instead, we replaced them with logical and meaningful substitutes. As we overcame this issue we were able to clean all three of our datasets. Currently, we are attempting to integrate the datasets and create some analysis with supporting evidence for our claims. 
+
+Below is our schedule for the remaining weeks: 
+
+Week 13: Finalize dataset integration and organization so that we can easily analyze using Python and SQL if we need it. 
+
+Week 14: Visually produce multiple graphs for supporting evidence and so that the information can be easily digested by people not familiar with our datasets. 
+
+Week 15: Create documentation on how to replicate our work so that it’s transparent. Rerun all scripts to make sure we didn’t cause any errors last minute. Do one more runthrough of the whole project to see if we have a finished product. Finally, submit! 
+
+
+## Dataset cleaning and statistics:
+We started with cleaning the fastfood dataset, where we found 12 nulls in fiber, 1 null in protein, 214 nulls in vitamin A, 210 nulls in vitamin C, and 210 nulls in calcium from the fastfood_cleaned.csv dataset. In our examination of this dataset, we found that the average fast food item has 530 calories. When looking at all the data within the fastfood dataset, we found that their calorie count produces a normal unimodal distribution that is skewed to the right. The median is less than the average, which accounts for the outlier foods that have a high caloric value. These outliers are responsible for increasing the mean of the distribution. 
+
+We then moved on to cleaning data from the USDA about different food categories. This data set has 7413 rows and 48 columns. Upon our initial analysis, we found that the 1st Household Weights Description column and the 2nd Household Weights column Description had 470 and 3100 NA values within their columns, respectively. As we described earlier, we didn’t want to remove the values, so we imputed the NA values with the medians of the remaining values for that column to create a logical substitute. Additionally, we standardized the naming conventions for each column in the dataset so it had consistent formatting. We thought that this type of standardization would make the data integration process simpler. However, as we continued cleaning this dataset, we quickly realized that not all of the values within the Category attribute are mutually exclusive. In future stages of our project, we can possibly combine some of these categories to create more uniformity across the dataset. When doing our initial exploration of information within this dataset, we chose to focus on the protein contents within each food category. We began by producing a histogram of the protein content of different food categories. We found that the average protein content across all foods in the dataset was 10.8 grams. But when looking at the overall distribution, we found that it was skewed to the right and had two modes. In general, we found fewer high-protein foods; as the protein content increased, the number of categories decreased. We also created a scatterplot to analyze the relationship between protein and cholesterol in foods and found very minimal correlation between these two attributes in a food category. Thus, we concluded that the cholesterol levels of a food shouldn’t be used to gauge its protein content. 
+
+## Next Steps:
+
+Some next steps for our final stages of the project are to follow the outlined timeline to ensure we address our research questions. First, we want our main focus to be on finalizing the integration and organization of the cleaned datasets so that the nutritional data from the fast food and USDA food categories can be analyzed side by side. We will then generate more visualizations which we are currently brainstorming, to effectively communicate the key differences between fast food and regular foods by highlighting some categories like calories, fiber, protein, cholesterol, etc. Next, we will finalize the document that we created this week to ensure a transparent guide to document our data cleaning, integration, and analysis processes. This ensures reproducibility for future readers of our analysis. 
+
+## Dataset Integration:
+
+We have started the research for dataset integration, which we mentioned in our timeline plans. We have a few links to resources on how to best integrate datasets: [Python Handbook]([url](https://jakevdp.github.io/PythonDataScienceHandbook/03.07-merge-and-join.html)), [UWM Guide]([url](https://sscc.wisc.edu/sscc/pubs/dwp/Combining_Data_Sets.html)), and [Pandas Documentation]([url](https://pandas.pydata.org/docs/user_guide/merging.html)). One issue we will have is not many overlapping keys, but we are considering concatenating since they follow a similar pattern, and we might map different category words to each other.
+
 
