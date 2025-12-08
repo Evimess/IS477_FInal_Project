@@ -61,13 +61,15 @@ From our integrated analysis of the fast food, USDA, and Yazio datasets, we noti
 
 In terms of calories per serving, fast food items cluster around a higher mean calorie count and display a right-skewed distribution driven by a few very high-calorie outliers. The highest-calorie fast food items are large sandwiches and burgers that exceed many regular foods by several hundred calories per serving. In contrast, the most calorie-dense regular foods tend to be nuts and oils, but they coexist with a long tail of low and moderate-calorie items, resulting in a more balanced overall distribution. This confirms that fast food disproportionately contributes to high calorie intake even before portion size normalization, which helps answer some of our initial guiding questions. 
 
+Our distribution plots of key nutrients show that fast food typically occupies higher ranges for total fat, sodium, and calories while regular foods show greater variability with many low-end values. Our boxplots by Type indicate that fast food has higher interquartile ranges for calories and fat, whereas regular foods span from very low fat items to high fat.  
 
-Our analysis highlighted clear distinctions between the two food groups:
-Sodium Density: Fast food items demonstrated a significantly higher sodium-to-calorie ratio compared to regular foods.
-Fat Consistency: Fast food items clustered tightly in high-fat ranges, whereas regular foods showed greater variance (ranging from low-fat fruits to high-fat oils).
-Fiber Content: Regular foods generally contain higher fiber density, a key marker for "healthy" food, compared to fast food options.
-Future Work and Lessons Learned
-Throughout this project, we learned that using Jupyter Notebooks significantly enhances the workflow compared to standalone Python scripts. Notebooks provide immediate visual feedback and allow for narrative text to sit side-by-side with code, increasing the "ease of visualization visibility" and interpretability of the data.
+Within fast food, savory entrees often have moderate sugar density while beverages elevate the overall sugar profile, making a simple fast food equals more sugar conclusion not as reliable. Protein behaves similarly as within the USDA dataset regular foods average about 10.8 grams of protein, with a right skewed distribution while fast food items offer moderate protein that does not distinguish healthiness.
+
+We created correlation heatmaps to clarify how much nutrients move in a similar way within each category. For fast foods, calories, total fat, and sodium tend to be positively associated, indicating formulations where energy density and fat rise together in the same items. In regular foods, correlations are more spread with high calorie items not always being very high in sodium or saturated fat, and nutrient combos vary widely across categories such as fruits and grains. This suggests that while regular foods include unhealthy extremes, fast food more consistently occupies a small clustered, high-calorie, high-fat, and high sodium region of the nutritional space. 
+
+Across all analyses, the most important components distinguishing fast food from regular food are total fat, sodium, fiber, calories and sugar. Sodium emerges as the clearest differentiator with fast food showing a higher sodium to calorie ratio, making sodium density a strong market of fast food like profiles. Sugar and protein add more nuance rather than providing clean separation which highlights no single metric fully captures the healthiness. 
+
+Overall, the findings confirm that fast food is less healthy than regular foods on core nutritional indicators when evaluated on a per calorie basis. Some regular foods can be calorie dense or high in specific nutrients, and variables like cholesterol or sugar by themselves are not reliable health proxies. High sodium and fat, low fiber, and elevated per serving calories most strongly characterizes fast food relative to regular foods in the integrated dataset. 
 
 
 ## Future Work and Lessons Learned
@@ -115,6 +117,7 @@ chmod 600 ~/.kaggle/kaggle.json
 Once the API is set up, you can run the entire analysis (acquisition, processing, and visualization) using the provided automation script:
 Install Dependencies:
 git clone https://github.com/Evimess/IS477_FInal_Project.git
+pip install -r requirements.txt
 Execute Workflow:
 snakemake --cores 1
 
