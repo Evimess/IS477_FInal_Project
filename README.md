@@ -114,9 +114,10 @@ chmod 600 ~/.kaggle/kaggle.json
 2. Running the Workflow
 Once the API is set up, you can run the entire analysis (acquisition, processing, and visualization) using the provided automation script:
 Install Dependencies:
-pip install -r requirements.txt
+git clone https://github.com/Evimess/IS477_FInal_Project.git
 Execute Workflow:
 snakemake --cores 1
+
 
 The structure for the workflow: 
 Main/
