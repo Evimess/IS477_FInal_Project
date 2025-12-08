@@ -1,5 +1,9 @@
 # IS477 Final Project: Fast Food vs. Regular Food Health Analysis
 
+Software: Python 3.10+, Snakemake, Pandas
+Date: December 2025
+Software: Python 3.11+, Snakemake, Pandas
+
 ## Contributors
 *   Luke
 *   Evan

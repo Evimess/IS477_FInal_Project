@@ -1,0 +1,15 @@
+# --- Data Files (Stored in Box) ---
+fastfood.csv
+food.csv
+FOOD-DATA-GROUP1.csv
+
+# --- Jupyter Notebooks ---
+# Ignore checkpoint files created by Jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db
+
+results/

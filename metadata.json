@@ -1,0 +1,66 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Comparative Nutritional Analysis of Fast Food vs. Regular Food",
+  "description": "An exploratory data analysis project comparing macronutrient and micronutrient profiles of fast food items against standard USDA food items to identify key health differentiators. The analysis identifies Sodium Density and Fat Consistency as primary distinguishing factors between the two groups.",
+  "url": "https://github.com/Evimess/IS477_FInal_Project",
+  "keywords": [
+    "Nutrition",
+    "Fast Food",
+    "Public Health",
+    "Data Analysis",
+    "Python",
+    "EDA"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Luke"
+    },
+    {
+      "@type": "Person",
+      "name": "Evan"
+    },
+    {
+      "@type": "Person",
+      "name": "Kirthi"
+    }
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "isAccessibleForFree": true,
+  "hasPart": [
+    {
+      "@type": "Dataset",
+      "name": "Fast Food Nutrition",
+      "description": "Nutritional breakdown of menu items from major fast food chains.",
+      "url": "https://www.kaggle.com/datasets/ulrikthygepedersen/fastfood-nutrition"
+    },
+    {
+      "@type": "Dataset",
+      "name": "Food Nutrition Dataset (USDA)",
+      "description": "Standard nutritional values for generic food items.",
+      "url": "https://www.kaggle.com/datasets/shrutisaxena/food-nutrition-dataset"
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/x-ipynb+json",
+      "contentUrl": "is477_final_analysis.ipynb"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "data/processed_data.csv"
+    }
+  ],
+  "variableMeasured": [
+    "Calories",
+    "Total Fat",
+    "Sodium",
+    "Sugar",
+    "Fiber",
+    "Protein"
+  ],
+  "dateCreated": "2025-12-7"
+}
