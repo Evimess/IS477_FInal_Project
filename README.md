@@ -115,21 +115,31 @@ mv ~/Downloads/kaggle.json ~/.kaggle/
 chmod 600 ~/.kaggle/kaggle.json
 2. Running the Workflow
 Once the API is set up, you can run the entire analysis (acquisition, processing, and visualization) using the provided automation script:
+
 Install Dependencies:
+
 git clone https://github.com/Evimess/IS477_FInal_Project.git
+
 Pip install snakemake
 pip install pulp==2.7.0
 pip install -r requirements.txt
+
 Execute Workflow:
 snakemake --cores 1 --forceall
 
 
 The structure for the workflow: 
+
 Main/
+
 ├── Snakefile
+
 ├── is477_analysis.ipynb
+
 ├── requirements.txt
+
 └── scripts/
+
     └── acquire_data.py
 
 
@@ -151,6 +161,8 @@ Nutritional Analysis
 Bowman, S. A., & Vinyard, B. T. (2004). Fast food consumption of US adults: impact on energy and nutrient intakes. Journal of the American College of Nutrition, 23(2), 163-168.
 
 Food Nutrition Dataset - https://www.kaggle.com/datasets/utsavdey1410/food-nutrition-dataset/data
+
 Food Nutrition Dataset 2 - https://www.kaggle.com/datasets/shrutisaxena/food-nutrition-dataset
+
 Fastfood Nutrition - https://www.kaggle.com/datasets/ulrikthygepedersen/fastfood-nutrition
 
