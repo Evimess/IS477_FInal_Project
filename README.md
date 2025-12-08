@@ -121,7 +121,7 @@ Pip install snakemake
 pip install pulp==2.7.0
 pip install -r requirements.txt
 Execute Workflow:
-snakemake --cores 1
+snakemake --cores 1 --forceall
 
 
 The structure for the workflow: 

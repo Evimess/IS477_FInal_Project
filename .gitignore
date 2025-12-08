@@ -2,6 +2,7 @@
 fastfood.csv
 food.csv
 FOOD-DATA-GROUP1.csv
+food1.csv
 
 # --- Jupyter Notebooks ---
 # Ignore checkpoint files created by Jupyter
@@ -13,3 +14,8 @@ FOOD-DATA-GROUP1.csv
 Thumbs.db
 
 results/
+FINAL FOOD DATASET/
+
+.snakemake
+is477_final_analysis.ipynb
+is477_final_analysis_executed.ipynb

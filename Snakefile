@@ -18,12 +18,11 @@ rule acquire_data:
 rule run_analysis:
     input:
         notebook = "is477_final_analysis.ipynb",
-        # We list the data as inputs so Snakemake knows to run acquire_data first
+        # Explicit dependencies ensure acquisition runs first
         data1 = "fastfood.csv",
         data2 = "food.csv",
         data3 = "FOOD-DATA-GROUP1.csv"
     output:
         "is477_final_analysis_executed.ipynb"
     shell:
-        # Removed --inplace so it creates the new output file required by Snakemake
         "jupyter nbconvert --to notebook --execute {input.notebook} --output {output}"
